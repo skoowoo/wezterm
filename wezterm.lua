@@ -13,10 +13,16 @@ return {
 
 	-- font
 	font_size = 13,
-	font = wezterm.font({
-		family = "VictorMono Nerd Font Mono",
-		weight = "Medium",
-		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	font = wezterm.font_with_fallback({
+		{
+			family = "VictorMono Nerd Font Mono",
+			weight = "Medium",
+			harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+		},
+		{
+			family = "LXGW WenKai Mono",
+			weight = "Regular",
+		},
 	}),
 	--font_rules = {
 	--	{
@@ -32,7 +38,7 @@ return {
 	-- colors
 	color_scheme = "hardhacker",
 	use_fancy_tab_bar = false,
-    window_decorations = "RESIZE",
+	window_decorations = "RESIZE | TITLE | MACOS_FORCE_ENABLE_SHADOW",
 
 	-- window
 	window_background_opacity = 0.95,
