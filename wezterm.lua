@@ -8,10 +8,25 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	hide_mouse_cursor_when_typing = true,
 	use_resize_increments = true,
+	bold_brightens_ansi_colors = true,
 
 	-- font
-	font = wezterm.font("VictorMono Nerd Font"),
 	font_size = 13,
+	font = wezterm.font({
+		family = "VictorMono Nerd Font Mono",
+		weight = "Medium",
+		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	}),
+	--font_rules = {
+	--	{
+	--		intensity = "Normal",
+	--		italic = true,
+	--		font = wezterm.font({
+	--			family = "VictorMono Nerd Font Mono",
+	--			style = "Oblique",
+	--		}),
+	--	},
+	--},
 
 	-- colors
 	color_scheme = "hardhacker",
