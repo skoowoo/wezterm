@@ -30,6 +30,8 @@ return {
 
 	-- colors
 	color_scheme = "hardhacker",
+	use_fancy_tab_bar = false,
+    window_decorations = "RESIZE",
 
 	-- window
 	window_background_opacity = 0.95,
@@ -41,43 +43,4 @@ return {
 	},
 	initial_cols = 210,
 	initial_rows = 50,
-
-	-- tab bar
-	window_frame = {
-		font_size = 12.0,
-		active_titlebar_bg = "#282433",
-		inactive_titlebar_bg = "#282433",
-	},
-	colors = {
-		tab_bar = {
-			background = "#282433",
-			active_tab = {
-				bg_color = "#282433",
-				fg_color = "#e965a5",
-
-				intensity = "Normal",
-				underline = "None",
-				italic = true,
-				strikethrough = false,
-			},
-			inactive_tab = {
-				bg_color = "#282433",
-				fg_color = "#938aad",
-			},
-			inactive_tab_hover = {
-				bg_color = "#e192ef",
-				fg_color = "#eee9fc",
-				italic = true,
-			},
-			new_tab = {
-				bg_color = "#282433",
-				fg_color = "#938aad",
-			},
-			new_tab_hover = {
-				bg_color = "#e192ef",
-				fg_color = "#eee9fc",
-				italic = true,
-			},
-		},
-	},
 }
