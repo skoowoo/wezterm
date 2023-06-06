@@ -9,6 +9,7 @@ return {
 	hide_mouse_cursor_when_typing = true,
 	use_resize_increments = true,
 	bold_brightens_ansi_colors = true,
+	audible_bell = "Disabled",
 
 	-- font
 	font_size = 13,
