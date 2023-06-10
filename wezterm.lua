@@ -1,5 +1,17 @@
 local wezterm = require("wezterm")
 
+wezterm.on("update-status", function(window, pane)
+	if pane:is_alt_screen_active() then
+		window:set_config_overrides({
+			window_padding = { left = 2, right = 2, top = 1, bottom = 1 },
+		})
+	else
+		window:set_config_overrides({
+			window_padding = { left = 50, right = 50, top = 10, bottom = 10 },
+		})
+	end
+end)
+
 return {
 	default_prog = { "zsh" },
 	underline_position = -4,
@@ -43,7 +55,7 @@ return {
 		left = 2,
 		right = 2,
 		top = 1,
-		bottom = 0,
+		bottom = 1,
 	},
 	initial_cols = 210,
 	initial_rows = 50,
