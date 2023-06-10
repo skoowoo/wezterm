@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 wezterm.on("update-status", function(window, pane)
 	if pane:is_alt_screen_active() then
 		window:set_config_overrides({
-			window_padding = { left = 2, right = 2, top = 1, bottom = 1 },
+			window_padding = { left = 2, right = 2, top = 2, bottom = 0 },
 		})
 	else
 		window:set_config_overrides({
@@ -22,6 +22,7 @@ return {
 	use_resize_increments = true,
 	bold_brightens_ansi_colors = true,
 	audible_bell = "Disabled",
+	enable_scroll_bar = false,
 
 	-- font
 	font_size = 13,
