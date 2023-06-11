@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 wezterm.on("update-status", function(window, pane)
 	if pane:is_alt_screen_active() then
 		window:set_config_overrides({
-			window_padding = { left = 2, right = 2, top = 2, bottom = 0 },
+			window_padding = { left = 0, right = 0, top = 0, bottom = 0},
 		})
 	else
 		window:set_config_overrides({
@@ -19,7 +19,7 @@ return {
 	force_reverse_video_cursor = true,
 	hide_tab_bar_if_only_one_tab = true,
 	hide_mouse_cursor_when_typing = true,
-	use_resize_increments = true,
+	-- use_resize_increments = true,
 	bold_brightens_ansi_colors = true,
 	audible_bell = "Disabled",
 	enable_scroll_bar = false,
@@ -51,13 +51,8 @@ return {
 	window_decorations = "RESIZE | TITLE | MACOS_FORCE_ENABLE_SHADOW",
 
 	-- window
-	window_background_opacity = 0.95,
-	window_padding = {
-		left = 2,
-		right = 2,
-		top = 1,
-		bottom = 1,
-	},
+	window_padding = { left = 0, right = 0, top = 0, bottom = 0},
+	window_background_opacity = 1,
 	initial_cols = 210,
 	initial_rows = 50,
 }
