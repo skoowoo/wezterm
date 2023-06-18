@@ -19,7 +19,7 @@ return {
 	force_reverse_video_cursor = true,
 	hide_tab_bar_if_only_one_tab = true,
 	hide_mouse_cursor_when_typing = true,
-	-- use_resize_increments = true,
+	use_resize_increments = true,
 	bold_brightens_ansi_colors = true,
 	audible_bell = "Disabled",
 	enable_scroll_bar = false,
@@ -34,16 +34,16 @@ return {
 		},
 		"LXGW WenKai Mono",
 	}),
-	--font_rules = {
-	--	{
-	--		intensity = "Normal",
-	--		italic = true,
-	--		font = wezterm.font({
-	--			family = "VictorMono Nerd Font Mono",
-	--			style = "Oblique",
-	--		}),
-	--	},
-	--},
+	font_rules = {
+		{
+			intensity = "Normal",
+			italic = true,
+			font = wezterm.font({
+				family = "VictorMono Nerd Font Mono",
+				style = "Oblique",
+			}),
+		},
+	},
 
 	-- colors
 	color_scheme = "hardhacker",
@@ -53,6 +53,6 @@ return {
 	-- window
 	window_padding = { left = 0, right = 0, top = 0, bottom = 0},
 	window_background_opacity = 1,
-	initial_cols = 210,
-	initial_rows = 50,
+	initial_cols = 235,
+	initial_rows = 55,
 }
