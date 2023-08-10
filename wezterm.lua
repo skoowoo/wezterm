@@ -19,7 +19,7 @@ return {
 	force_reverse_video_cursor = true,
 	hide_tab_bar_if_only_one_tab = true,
 	hide_mouse_cursor_when_typing = true,
-	use_resize_increments = true,
+	use_resize_increments = false,
 	bold_brightens_ansi_colors = true,
 	audible_bell = "Disabled",
 	enable_scroll_bar = false,
@@ -52,7 +52,8 @@ return {
 
 	-- window
 	window_padding = { left = 0, right = 0, top = 0, bottom = 0},
-	window_background_opacity = 1,
+	window_background_opacity = 0.9,
+	macos_window_background_blur = 20,
 	initial_cols = 255,
 	initial_rows = 55,
 }
