@@ -1,13 +1,33 @@
 local wezterm = require("wezterm")
 
+--wezterm.on("update-status", function(window, pane)
+--	if pane:is_alt_screen_active() then
+--		window:set_config_overrides({
+--			window_padding = { left = 1, right = 1, top = 15, bottom = 0 },
+--		})
+--	else
+--		window:set_config_overrides({
+--			window_padding = { left = 20, right = 20, top = 15, bottom = 15 },
+--			window_background_opacity = 0.9,
+--			macos_window_background_blur = 20,
+--		})
+--	end
+--end)
+
 wezterm.on("update-status", function(window, pane)
-	if pane:is_alt_screen_active() then
+	local info = pane:get_foreground_process_info()
+	if info == nil then
+		return
+	end
+	if info.name == "nvim" then
 		window:set_config_overrides({
-			window_padding = { left = 0, right = 0, top = 0, bottom = 0},
+			window_padding = { left = 1, right = 1, top = 15, bottom = 0 },
 		})
 	else
 		window:set_config_overrides({
-			window_padding = { left = 20, right = 20, top = 5, bottom = 10 },
+			window_padding = { left = 20, right = 20, top = 15, bottom = 15 },
+			window_background_opacity = 0.9,
+			macos_window_background_blur = 20,
 		})
 	end
 end)
@@ -18,6 +38,7 @@ return {
 	underline_thickness = "200%",
 	force_reverse_video_cursor = true,
 	hide_tab_bar_if_only_one_tab = true,
+	tab_bar_at_bottom = false,
 	hide_mouse_cursor_when_typing = true,
 	use_resize_increments = false,
 	bold_brightens_ansi_colors = true,
@@ -51,9 +72,6 @@ return {
 	window_decorations = "RESIZE | TITLE | MACOS_FORCE_ENABLE_SHADOW",
 
 	-- window
-	window_padding = { left = 0, right = 0, top = 0, bottom = 0},
-	window_background_opacity = 0.9,
-	macos_window_background_blur = 20,
 	initial_cols = 255,
 	initial_rows = 55,
 }
